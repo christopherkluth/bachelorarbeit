@@ -1,0 +1,35 @@
+%!TEX root = thesis.tex
+
+\chapter{Ergänzende Software}
+\section{Programme}
+Es existiert eine Reihe von Zusatzprogrammen für LaTeX, die unterschiedlichste Funktionen in LaTeX bereitstellen und in den TeX-Distributionen enthalten sind.
+\begin{itemize}
+	\item \href{https://de.wikipedia.org/w/index.php?title=BibLaTeX&action=edit&redlink=1}{BibLaTeX} automatisiert die Erstellung von Literaturverzeichnissen (aktuell!)
+	\item \href{https://de.wikipedia.org/wiki/BibTeX}{BibTeX} automatisiert die Erstellung von Literaturverzeichnissen
+	\item \href{https://de.wikipedia.org/w/index.php?title=Biber_(Software)&action=edit&redlink=1}{biber}: Alternative zu BibTeX
+	\item \href{https://de.wikipedia.org/wiki/PdfLaTeX}{pdfLaTeX} erzeugt aus .tex- direkt .pdf-Dokumente, mit vielen Möglichkeiten von PDF; mittels pdfTeX und Grafiken, die mit PGF/TikZ programmiert sind, zu setzen
+	\item \href{https://de.wikipedia.org/wiki/MakeIndex}{MakeIndex} und \href{https://de.wikipedia.org/w/index.php?title=Xindy&action=edit&redlink=1}{xindy} zur Erzeugung von Stichwortverzeichnissen
+	\item \href{https://de.wikipedia.org/wiki/MusiXTeX}{MusiXTeX} zur Verwendung vom Notensatz
+	Dazu gehören auch Werkzeuge wie PSTricks oder PGF/TikZ, die Zeichnungen oder Grafiken erstellen oder umwandeln können. Darüber hinaus gibt es unter anderem folgende Programme:
+	\item \href{https://de.wikipedia.org/w/index.php?title=Tikz2pdf&action=edit&redlink=1}{tikz2pdf}, ein Python-Skript, um allein stehende PGF/TikZ-Dateien als PDF-Dokumente zu setzen
+	\item \href{https://de.wikipedia.org/wiki/JabRef}{JabRef}, ein Javaprogramm zur Verwaltung von Bibliografie-Dateien (.bib)
+	\item \href{https://de.wikipedia.org/w/index.php?title=LaTable&action=edit&redlink=1}{LaTable}, ein visueller Tabelleneditor; erzeugte Tabellen werden in LaTeX-Code umgewandelt.
+	
+\end{itemize}
+
+\section{Konverter}
+Zur besseren Einbindung in andere Projekte und zur Erweiterung der Ausgabemöglichkeiten gibt es eine Reihe von Konvertern:
+\begin{itemize}
+	\item \href{https://de.wikipedia.org/wiki/TeX4ht}{TeX4ht}, TeX2page[10] und LaTeX2html dienen zur Umwandlung von LaTeX-Texten in HTML und XML. Weitere Projekte zur Konvertierung von LaTeX nach HTML sind Hevea und das Python-Skript PlasTeX. TeX4ht unterstützt auch die Konvertierung in die Formate DocBook, OpenDocument Text (ODT), TEI und Java Help.
+	\item Writer2LaTeX wandelt OpenOffice.org/StarOffice-Textdateien in LaTeX, BibTeX-Dokumente oder XHTML um.
+	\item pandoc liest Markdown, reStructuredText, HTML, LaTeX und schreibt Markdown, reStructuredText, HTML, LaTeX, ConTeXt, PDF, RTF, DocBook XML, OpenDocument Text (ODT), GNU Texinfo, MediaWiki markup, groff für Manpages und S5 für Präsentationen im Webbrowser.\cite{pandoc}
+	\item Calc2LaTeX setzt Calc-Tabelleninhalte (OpenOffice.org/StarOffice) in eine LaTeX-Tabelle um.
+	\item Excel2LaTeX ist ein Makro, das Excel-Tabellen in LaTeX umwandelt.
+	\item Word2LaTeX ist ein weiteres Makro, das Word-Textdateien in LaTeX umwandelt.
+	\item \href{http://sourceforge.net/p/wb2pdf/git/ci/master/tree/}{MediaWiki} to LaTeX konvertiert MediaWiki-Artikel nach LaTeX.
+\end{itemize}
+
+\section{KOMA-Script}
+Die LaTeX-Standardklassen richten sich nach US-amerikanischen typografischen Konventionen und Papierformaten. Aus diesem Grund wurden zusätzliche Pakete und Klassen entwickelt, die es erlauben, auf europäische typografische Konventionen und DIN-Papierformate umzuschalten. Auch das bekannte KOMA-Script, das typografische Feinanpassungen und eine deutliche Erweiterung der Auszeichnungssprache von LaTeX bietet, hat hier seinen Ursprung. Das Layout geht dabei auf Arbeiten von Jan Tschichold zurück. Mittlerweile ist das Ziel von KOMA-Script, möglichst flexibel zu sein, um vor allem sinnvolle, aber auch nur häufig gewünschte Variationsmöglichkeiten unmittelbar und einfach zu ermöglichen.
+
+Dabei implementieren die KOMA-Script-Klassen auch die komplette Benutzerschnittstelle der Standardklassen. Infolge dieser Flexibilität und Kompatibilität haben die KOMA-Script-Klassen inzwischen in vielen Bereichen die Standardklassen verdrängt. Häufig dienen sie auch Autoren von Spezialklassen als Grundlage. Dies ist nicht allein auf den europäischen Raum beschränkt. Als Beispiel sei die japanische Briefanpassung genannt, die direkt in KOMA-Script integriert ist.

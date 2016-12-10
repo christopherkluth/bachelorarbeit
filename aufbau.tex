@@ -1,0 +1,74 @@
+%!TEX root = thesis.tex
+
+\chapter{Aufbau eines Dokuments}
+Auf der linken Seite ist ein Beispiel als Quelltext dargestellt, das mit einem beliebigen Texteditor erstellt werden kann. Rechts ist die Ausgabe dieses Beispiels dargestellt, die unabhängig vom Bildschirm- oder Druckertyp ist, auf dem sie erzeugt wird.
+
+
+\begin{tabular}{c|c}
+Quelltext eines LaTeX-Dokumentes&Ausgabe des Dokumentes\\
+\hline
+\begin{minipage}[b]{\textwidth/2}
+\lstset{basicstyle=\tiny}
+\begin{lstlisting}
+%% Erläuterungen zu den Befehlen erfolgen unter
+%% diesem Beispiel.
+
+\documentclass{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+
+\title{Ein Testdokument}
+\author{Otto Normalverbraucher}
+\date{5. Januar 2004}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\section{Einleitung}
+
+Hier kommt die Einleitung. Ihre Überschrift kommt
+automatisch in das Inhaltsverzeichnis.
+
+\subsection{Formeln}
+
+\LaTeX{} ist auch ohne Formeln sehr nützlich und
+einfach zu verwenden. Grafiken, Tabellen,
+Querverweise aller Art, Literatur- und
+Stichwortverzeichnis sind kein Problem.
+
+Formeln sind etwas schwieriger, dennoch hier ein
+einfaches Beispiel.  Zwei von Einsteins
+berühmtesten Formeln lauten:
+\begin{align}
+E &= mc^2                                  \\
+m &= \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{align}
+Aber wer keine Formeln schreibt, braucht sich
+damit auch nicht zu beschäftigen.
+\end{document}
+\end{lstlisting}
+\end{minipage}
+&
+\begin{minipage}[t]{\textwidth/2}
+
+		\includegraphics[width=\linewidth]{output}
+
+\end{minipage}\\
+\label{tab:codeOutput}
+\end{tabular} 
+
+LaTeX-Befehle beginnen immer mit einem Backslash (\ybox{$\backslash$}) und können Parameter zwischen geschweiften (\ybox{\{\}}) sowie optionale Parameter zwischen eckigen Klammern (\ybox{$\backslash$[$\backslash$]}) enthalten (\ybox{$\backslash$befehl$\backslash$[optionaler parameter$\backslash$]\{parameter\}}).
+
+Mit dem ersten Befehl, \ybox{$\backslash$documentclass}, wird definiert, was für eine Art von Text in dem Dokument folgen soll. Für deutsche Dokumente sind die KOMA-Script-Klassen grundsätzlich den Standardklassen vorzuziehen, deswegen werden diese im Folgenden verwendet. Die Klasse scrartcl ist für kürzere Artikel gedacht, scrreprt für längere Berichte und scrbook für Bücher. Die Klasse bestimmt unter anderem die oberste Hauptgliederungsebene eines Textes: scrbook und scrreprt beginnen mit Kapitel (\ybox{$\backslash$chapter}), scrartcl mit Abschnitt (\ybox{$\backslash$section}). Über den Hauptgliederungsebenen existiert bei allen Klassen noch die Möglichkeit, das Dokument in Teile oder Bände (\ybox{$\backslash$part}) aufzuteilen. Alle drei Klassen kennen ein Inhaltsverzeichnis, die Klassen scrartcl und scrreprt zusätzlich eine optionale Zusammenfassung (abstract), scrbook nicht. Es gibt weitere Klassen für Folien, Präsentationen (beispielsweise beamer) oder DIN-gerechte Briefe (beispielsweise scrlttr2).
+
+Der Befehl \ybox{$\backslash$usepackage} bindet LaTeX-Pakete ein, mit denen in dem Dokument gegebenenfalls zusätzliche Funktionen genutzt werden können oder beispielsweise die deutsche Rechtschreibung und Worttrennung ausgewählt wird. Im obigen Beispiel werden die im Deutschen standardmäßig zu verwendenden Pakete benutzt.
+
+Das Paket inputenc mit der Option utf8 zeigt LaTeX die Codierung der verwendeten ASCII-Datei an. Weitere Möglichkeiten sind hier bspw. latin1, ansinew. fontenc weist LaTeX an, eine Schrift (T1) zu verwenden, die echte Umlaute enthält. So kann das pdf hinterher nach diesen Umlauten auch durchsucht werden. Leider ist diese Schrift keine Vektorschrift und Ligaturen werden auch nur bedingt gut umgesetzt. Das behebt das Paket lmodern final.
+
+Mit den Befehlen \ybox{$\backslash$title} und \ybox{$\backslash$author} lassen sich der Titel des Dokumentes und der Name des Autors definieren. Diese können dann im gesamten Dokument genutzt werden oder beispielsweise automatisch mit dem Befehl \ybox{$\backslash$maketitle} ausgegeben werden.
+
+Erst mit \ybox{$\backslash$begin\{document\}} startet der eigentliche Inhalt des Dokumentes. Jeder Text, der zwischen \ybox{$\backslash$begin\{document\}} und \ybox{$\backslash$end\{document\}} steht, wird ausgegeben. Mit Befehlen wie \ybox{$\backslash$section} oder \ybox{$\backslash$subsection} lässt sich der Text mit Überschriften strukturieren.
