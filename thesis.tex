@@ -1,6 +1,7 @@
 \documentclass{scrbook}
 
-\usepackage{color,soul}
+\usepackage{soul}
+
 
 \input{style}
 \input{macros}
@@ -18,7 +19,11 @@
 
 \newcommand{\duedate}{15. Juli 2016}
 
-\newcommand{\ybox}[1]{\sethlcolor{yellow!30}\hl{#1}}
+\newcommand{\ybox}[1]{
+	\definecolor{lightdandelion}{RGB}{255,255,204}
+	\sethlcolor{lightdandelion}
+	\hl{#1}
+	}
 
 \begin{document}
   \frontmatter
