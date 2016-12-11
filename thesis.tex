@@ -8,8 +8,8 @@
 
 % Set title and author used in the PDF meta data
 \hypersetup{
-  pdftitle={Wie schreibe ich eine Masterarbeit?},
-  pdfauthor={Erika Mustermann}
+  pdftitle={LaTeX},
+  pdfauthor={Max Mustergruppe}
 }
 
 % Depending on which of the following two color schemes you import your thesis will be in color or grayscale. I recommend to generate a colored version as a PDF and a grayscale version for printing.
@@ -17,12 +17,12 @@
 %\input{schema-color}
 \input{schema-gray}
 
-\newcommand{\duedate}{15. Juli 2016}
+\newcommand{\duedate}{13. Dez 2016}
 
 \newcommand{\ybox}[1]{
 	\definecolor{lightdandelion}{RGB}{255,255,204}
 	\sethlcolor{lightdandelion}
-	\hl{#1}
+	\textit{\hl{#1}}
 	}
 
 \begin{document}
@@ -30,7 +30,7 @@
   \include{title}
   \include{declaration}
 
-  %\include{abstract}
+  \include{abstract}
 
   \cleardoublepage
   \phantomsection
