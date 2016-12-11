@@ -1,5 +1,7 @@
 \documentclass{scrbook}
 
+\usepackage{color,soul}
+
 \input{style}
 \input{macros}
 
@@ -16,7 +18,7 @@
 
 \newcommand{\duedate}{15. Juli 2016}
 
-\newcommand{\ybox}[1]{\colorbox{yellow!20}{#1}}
+\newcommand{\ybox}[1]{\sethlcolor{yellow}\hl{#1}}
 
 \begin{document}
   \frontmatter
